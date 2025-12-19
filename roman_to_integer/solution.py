@@ -64,4 +64,3 @@ if __name__ == '__main__':
     ans2 = Solution().romanToInt(tests[2]["s"])
     ans3 = Solution().romanToInt(tests[3]["s"])
     ans4 = Solution().romanToInt(tests[4]["s"])
-

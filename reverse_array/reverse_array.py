@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-
 import copy
-
 
 class Solution:
     def reverse_array(self, array: list[int]) -> list[int]:

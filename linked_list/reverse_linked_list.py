@@ -64,12 +64,10 @@ def main():
         3: {"nums": [-1, 0, 3, 7, 10]},
     }
 
-    ans1 = Solution().solve(tests[1]["nums"])
-    ans2 = Solution().solve(tests[2]["nums"])
-    ans3 = Solution().solve(tests[3]["nums"])
-
+    Solution().solve(tests[1]["nums"])
+    Solution().solve(tests[2]["nums"])
+    Solution().solve(tests[3]["nums"])
 
 
 if __name__ == '__main__':
     main()
-
