@@ -15,7 +15,22 @@ class Solution:
 
     def test_results(self, expected: int, actual: int) -> None:
         print(f"Expected: {expected}, Actual: {actual}")
-        assert expected == actual
+        assert expected == actual, f"[TEST FAILED] - expected {expected} got {actual}\n{expected} != {actual}"
+        print("[TEST PASSED]")
+
+
+class Solution2:
+    def majorityElement(self, nums: list[int]) -> int:
+        nums.sort()
+        n = len(nums)
+        return nums[n//2]
+
+
+
+def test_results(expected: int, actual: int) -> None:
+    print(f"Expected: {expected}, Actual: {actual}")
+    assert expected == actual, f"[TEST FAILED] - expected {expected} got {actual}\n{expected} != {actual}"
+    print("[TEST PASSED]")
 
 
 if __name__ == '__main__':
@@ -28,6 +43,13 @@ if __name__ == '__main__':
     ans1 = Solution().majorityElement(tests[1]["nums"])
     ans2 = Solution().majorityElement(tests[2]["nums"])
     ans3 = Solution().majorityElement(tests[3]["nums"])
-    Solution().test_results(tests[1]["expected"], actual=ans1)
-    Solution().test_results(tests[2]["expected"], actual=ans2)
-    Solution().test_results(tests[3]["expected"], actual=ans3)
+    ans4 = Solution2().majorityElement(tests[1]["nums"])
+    ans5 = Solution2().majorityElement(tests[2]["nums"])
+    ans6 = Solution2().majorityElement(tests[3]["nums"])
+
+    test_results(tests[1]["expected"], actual=ans1)
+    test_results(tests[2]["expected"], actual=ans2)
+    test_results(tests[3]["expected"], actual=ans3)
+    test_results(tests[1]["expected"], actual=ans4)
+    test_results(tests[2]["expected"], actual=ans5)
+    test_results(tests[3]["expected"], actual=ans6)
