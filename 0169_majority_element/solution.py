@@ -10,13 +10,7 @@ class Solution:
 
             if counts[num] > (len(nums) / 2):
                 return num
-
         return -1 
-
-    def test_results(self, expected: int, actual: int) -> None:
-        print(f"Expected: {expected}, Actual: {actual}")
-        assert expected == actual, f"[TEST FAILED] - expected {expected} got {actual}\n{expected} != {actual}"
-        print("[TEST PASSED]")
 
 
 class Solution2:
@@ -24,7 +18,6 @@ class Solution2:
         nums.sort()
         n = len(nums)
         return nums[n//2]
-
 
 
 def test_results(expected: int, actual: int) -> None:
